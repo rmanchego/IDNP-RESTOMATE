@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "621022157501",
-    "firebase_url": "https://chat-test-7399b.firebaseio.com",
-    "project_id": "chat-test-7399b",
-    "storage_bucket": "chat-test-7399b.appspot.com"
+    "project_number": "363994083678",
+    "firebase_url": "https://chat-restomate.firebaseio.com",
+    "project_id": "chat-restomate",
+    "storage_bucket": "chat-restomate.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:621022157501:android:d5f83d6f5e80720f3d75d4",
+        "mobilesdk_app_id": "1:363994083678:android:280de1a4997a46c34d1fcf",
         "android_client_info": {
           "package_name": "com.practica02.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "621022157501-hq2ectjrjn0rd7ohe80e45ld1oimpu2q.apps.googleusercontent.com",
+          "client_id": "363994083678-ja1mtmlplbmq8nmumbfnb712cj0lvb91.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDe4qHK--UI4ZWzfpIyRylcMy28kRxAwLw"
+          "current_key": "AIzaSyAhZlP-Qu0Ow6SETOapsRuEGc4L9KbvJ_c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "621022157501-hq2ectjrjn0rd7ohe80e45ld1oimpu2q.apps.googleusercontent.com",
+              "client_id": "363994083678-ja1mtmlplbmq8nmumbfnb712cj0lvb91.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
