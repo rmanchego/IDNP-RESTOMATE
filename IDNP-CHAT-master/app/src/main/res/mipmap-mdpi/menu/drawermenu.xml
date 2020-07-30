@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/info_name" android:icon="@mipmap/ic_action_user"
+        android:title="Nombre" />
+
+    <item
+        android:id="@+id/info_surname"
+        android:icon="@mipmap/ic_action_user"
+        android:title="Apellido"/>
+
+    <item android:id="@+id/info_id" android:title="Placa"
+        android:icon="@mipmap/ic_action_paste"/>
+</menu>

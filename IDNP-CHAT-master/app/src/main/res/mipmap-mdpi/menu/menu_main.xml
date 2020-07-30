@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".VistaInicial">
+
+
+    <item
+        android:id="@+id/ajustes_main_menu"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="never"
+        android:title="@string/ajustes"/>
+
+
+    <item
+        android:id="@+id/agregar_main_menu"
+        android:icon="@android:drawable/ic_dialog_info"
+        app:showAsAction="never"
+        android:title="@string/agregar"/>
+
+
+    <item
+        android:id="@+id/ayuda_main_menu"
+        app:showAsAction="never"
+        android:title="@string/ayuda"/>
+    <item
+        android:id="@+id/cerrar_main_menu"
+        app:showAsAction="never"
+        android:title="@string/close_a"/>
+
+
+</menu>

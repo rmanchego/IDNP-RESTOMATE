@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mdVerPerfil" android:icon="@mipmap/ic_action_user"
+        android:title="Ver Perfil" />
+
+    <item
+        android:id="@+id/mdAyuda"
+        android:icon="@mipmap/ic_action_user"
+        android:title="Ayuda"/>
+
+    <!--
+    <item android:id="@+id/info_id" android:title="Placa"
+        android:icon="@mipmap/ic_action_paste"/> -->
+
+</menu>

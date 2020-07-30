@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".InfoBasica">
+
+
+    <item android:title="Configuración"
+        android:id="@+id/config"
+        android:icon="@mipmap/tuerca"
+        android:orderInCategory="160"
+        app:showAsAction="always"/>
+
+</menu>
