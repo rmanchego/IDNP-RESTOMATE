@@ -86,30 +86,64 @@
             </RadioGroup>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Datos de la Tarjeta"/>
+
+            <EditText
+                android:id="@+id/idModificarNombreTarjeta"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre en la tarjeta"
+                android:inputType="text" />
+
+            <EditText android:id="@+id/idModificarNumeroTarjeta"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:hint="Numero de la tarjeta"
+                android:inputType="text" />
+
+            <RadioGroup
+                android:id="@+id/rgTarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Informacion del Vehiculo"
-                android:paddingTop="20sp"
-                android:gravity="center"/>
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rdModificarVisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="VISA"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rdModificarMasterCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="MasterCard"
+                    android:layout_weight="1"/>
+                <RadioButton
+                    android:id="@+id/rdModificarScotiabank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Scotiabank"
+                    android:layout_weight="1"/>
+            </RadioGroup>
 
             <EditText
-                android:id="@+id/idModificarPlaca"
-                android:layout_width="fill_parent"
+                android:id="@+id/txtModificarFechaDeCaducidad"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Placa"
-                android:inputType="text" />
-
-            <EditText android:id="@+id/idModificarModelo"
-                android:layout_height="wrap_content"
-                android:layout_width="fill_parent"
-                android:hint="Modelo"
-                android:inputType="text" />
+                android:hint="Fecha de Caducidad"
+                android:inputType="date"
+                android:clickable="true"
+                android:focusable="false"/>
 
             <EditText
-                android:id="@+id/idModificarColor"
+                android:id="@+id/idModificarRegistroCVV"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Color"
+                android:hint="CVV"
                 android:inputType="text" />
 
             <Button

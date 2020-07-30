@@ -99,7 +99,7 @@ public class MensajeriaActivity extends AppCompatActivity {
         UsuarioDAO.getInstancia().obtenerInformacionDeUsuarioPorLlave(KEY_RECEPTOR, new UsuarioDAO.IDevolverUsuario() {
             @Override
             public void devolverUsuario(LUsuario lUsuario) {
-                nombrePerfil.setText(lUsuario.getUsuario().getPlaca() + " / " + lUsuario.getUsuario().getNombre());
+                nombrePerfil.setText(lUsuario.getUsuario().getNombre());
                 String url = lUsuario.getUsuario().getFotoPerfilURL();
                 loadImageFromURL(url);
             }

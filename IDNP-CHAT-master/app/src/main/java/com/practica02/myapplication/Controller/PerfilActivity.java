@@ -27,6 +27,11 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView txtPlaca;
     private TextView txtModelo;
     private TextView txtColor;
+    private TextView txtNombreTarjeta;
+    private TextView txtNumeroTarjeta;
+    private TextView txtTipoTarjeta;
+    private TextView txtFechaDeCaducidad;
+    private TextView txtCVV;
 
     //private Button btnModificar;
 
@@ -44,9 +49,12 @@ public class PerfilActivity extends AppCompatActivity {
         //txtContraseña = findViewById(R.id.idPerfilContraseña);
         txtFechaDeNacimiento = findViewById(R.id.txtPerfilFechaDeNacimiento);
         txtGenero = findViewById(R.id.txtPerfilGenero);
-        txtPlaca = findViewById(R.id.txtPerfilPlaca);
-        txtModelo = findViewById(R.id.txtPerfilModelo);
-        txtColor = findViewById(R.id.txtPerfilColor);
+        txtNombreTarjeta = findViewById(R.id.txtPerfilNombreTarjeta);
+        txtNumeroTarjeta = findViewById(R.id.txtPerfilNumeroTarjeta);
+        txtTipoTarjeta = findViewById(R.id.txtPerfilTipoTarjeta);
+        txtFechaDeCaducidad = findViewById(R.id.txtPerfilCaducidadTarjeta);
+        txtCVV = findViewById(R.id.txtPerfilCVV);
+
         //btnModificar = findViewById(R.id.btnModificarPerfil);
 
         mAuth = FirebaseAuth.getInstance();
@@ -60,8 +68,12 @@ public class PerfilActivity extends AppCompatActivity {
                 txtCorreo.setText(lUsuario.getUsuario().getCorreo());
                 txtFechaDeNacimiento.setText(LUsuario.obtenerFechaDeNacimiento(lUsuario.getUsuario().getFechaDeNacimiento()));
                 txtGenero.setText(lUsuario.getUsuario().getGenero());
-                txtPlaca.setText(lUsuario.getUsuario().getPlaca());
-                txtModelo.setText(lUsuario.getUsuario().getPlaca());
+                txtNombreTarjeta.setText(lUsuario.getUsuario().getNombreTarjeta());
+                txtNumeroTarjeta.setText(""+lUsuario.getUsuario().getNumeroTarjeta());
+                txtTipoTarjeta.setText(lUsuario.getUsuario().getTipoTarjeta());
+                txtFechaDeCaducidad.setText(LUsuario.obtenerFechaDeCaducidad(lUsuario.getUsuario().getFechaDeCaducidad()));
+                txtCVV.setText(lUsuario.getUsuario().getCVV());
+
 
             }
             @Override

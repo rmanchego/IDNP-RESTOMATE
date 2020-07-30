@@ -7,9 +7,12 @@ public class Usuario {
     private String correo;
     private long fechaDeNacimiento;
     private String genero;
-    private String placa;
-    private String modelo;
-    private String color;
+    private String nombreTarjeta;
+    private int numeroTarjeta;
+    private String tipoTarjeta;
+    private long fechaDeCaducidad;
+    private String CVV;
+
 
     public Usuario() {
     }
@@ -56,27 +59,43 @@ public class Usuario {
         this.genero = genero;
     }
 
-    public String getPlaca() {
-        return placa;
+    public String getNombreTarjeta() {
+        return nombreTarjeta;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setNombreTarjeta(String nombreTarjeta) {
+        this.nombreTarjeta = nombreTarjeta;
     }
 
-    public String getModelo() {
-        return modelo;
+    public int getNumeroTarjeta() {
+        return numeroTarjeta;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setNumeroTarjeta(int numeroTarjeta) {
+        this.numeroTarjeta = numeroTarjeta;
     }
 
-    public String getColor() {
-        return color;
+    public String getTipoTarjeta() {
+        return tipoTarjeta;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setTipoTarjeta(String tipoTarjeta) {
+        this.tipoTarjeta = tipoTarjeta;
+    }
+
+    public long getFechaDeCaducidad() {
+        return fechaDeCaducidad;
+    }
+
+    public void setFechaDeCaducidad(long fechaDeCaducidad) {
+        this.fechaDeCaducidad = fechaDeCaducidad;
+    }
+
+    public String getCVV() {
+        return CVV;
+    }
+
+    public void setCVV(String CVV) {
+        this.CVV = CVV;
     }
 }

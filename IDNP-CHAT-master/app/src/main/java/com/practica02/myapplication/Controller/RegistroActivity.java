@@ -56,13 +56,19 @@ public class RegistroActivity extends AppCompatActivity {
     private EditText txtContraseña;
     private EditText getTxtContraseñaRepetida;
     private EditText txtFechaDeNacimiento;
-    private EditText txtPlaca;
-    private EditText txtModelo;
-    private EditText txtColor;
+    private EditText txtNombreTarjeta;
+    private EditText txtNumeroTarjeta;
+    private EditText txtFechaDeCaducidad;
+    private EditText txtCVV;
 
     //private RadioGroup rgGenero;
     private RadioButton rdHombre;
     private RadioButton rdMujer;
+
+    //private RadioGroup rgTarjeta;
+    private RadioButton rdVisa;
+    private RadioButton rdMastarCard;
+    private RadioButton rdScotiabank;
 
     private Button btnRegistrar;
 
@@ -77,6 +83,7 @@ public class RegistroActivity extends AppCompatActivity {
 
     private Uri fotoPerfilUri;
     private long fechaDeNacimiento;
+    private long fechaDeCaducidad;
 
     @Override
     protected void onCreate(Bundle  savedInstanceState) {
@@ -92,9 +99,14 @@ public class RegistroActivity extends AppCompatActivity {
         //rgGenero = findViewById(R.id.rgGenero);
         rdHombre = findViewById(R.id.rdHombre);
         rdMujer = findViewById(R.id.rdMujer);
-        txtPlaca = findViewById(R.id.idRegistroPlaca);
-        txtModelo = findViewById(R.id.idRegistroModelo);
-        txtColor = findViewById(R.id.idRegistroColor);
+        txtNombreTarjeta = findViewById(R.id.idRegistroNombreTarjeta);
+        txtNumeroTarjeta = findViewById(R.id.idRegistroNumeroTarjeta);
+        txtFechaDeCaducidad = findViewById(R.id.txtFechaDeCaducidad);
+        txtCVV = findViewById(R.id.idRegistroCVV);
+
+        rdVisa = findViewById(R.id.rdVisa);
+        rdMastarCard = findViewById(R.id.rdMasterCard);
+        rdScotiabank = findViewById(R.id.rdScotiabank);
 
         btnRegistrar = (Button) findViewById(R.id.idRegistroRegistrar);
 
@@ -188,15 +200,38 @@ public class RegistroActivity extends AppCompatActivity {
             }
         });
 
+        txtFechaDeCaducidad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar calendar = Calendar.getInstance();
+                DatePickerDialog datePickerDialog = new DatePickerDialog(RegistroActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int mes, int dia) {
+                        Calendar calendarResultado = Calendar.getInstance();
+                        calendarResultado.set(Calendar.YEAR, year);
+                        calendarResultado.set(Calendar.MONTH, mes);
+                        calendarResultado.set(Calendar.DAY_OF_MONTH, dia);
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                        Date date = calendarResultado.getTime();
+                        String fechaDeNacimientoTexto = simpleDateFormat.format(date);
+                        fechaDeCaducidad = date.getTime();
+                        txtFechaDeCaducidad.setText(fechaDeNacimientoTexto);
+                    }
+                },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+                datePickerDialog.show();
+            }
+        });
+
+
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final String correo = txtCorreo.getText().toString();
                 final String nombre = txtNombre.getText().toString();
-                final String placa = txtPlaca.getText().toString();
-                final String modelo = txtModelo.getText().toString();
-                final String color = txtColor.getText().toString();
-                if(isValidEmail(correo) && validarContraseña() && validarNombre(nombre) && validarString(placa) && validarString(modelo) && validarString(color)){
+                final String nombreTarjeta = txtNombreTarjeta.getText().toString();
+                final String numeroTarjeta = txtNumeroTarjeta.getText().toString();
+                final String cvv = txtCVV.getText().toString();
+                if(isValidEmail(correo) && validarContraseña() && validarNombre(nombre) && validarString(nombreTarjeta) && validarString(numeroTarjeta) && validarString(cvv)){
                     String contraseña = txtContraseña.getText().toString();
                     mAuth.createUserWithEmailAndPassword(correo, contraseña)
                             .addOnCompleteListener(RegistroActivity.this, new OnCompleteListener<AuthResult>() {
@@ -210,6 +245,15 @@ public class RegistroActivity extends AppCompatActivity {
                                             genero = "Mujer";
                                         }
 
+                                        final String tipoTarjeta;
+                                        if(rdVisa.isChecked()){
+                                            tipoTarjeta = "VISA";
+                                        } else if(rdMastarCard.isChecked()){
+                                            tipoTarjeta = "Master Card";
+                                        } else {
+                                            tipoTarjeta = "Scotiabank";
+                                        }
+
                                         if(fotoPerfilUri!=null) { //Si selecciono una foto
                                             UsuarioDAO.getInstancia().subirFotoUri(fotoPerfilUri, new UsuarioDAO.IDevolverURLFoto() {
                                                     @Override
@@ -221,9 +265,12 @@ public class RegistroActivity extends AppCompatActivity {
                                                     usuario.setFechaDeNacimiento(fechaDeNacimiento);
                                                     usuario.setGenero(genero);
                                                     usuario.setFotoPerfilURL(url);
-                                                    usuario.setPlaca(placa);
-                                                    usuario.setModelo(modelo);
-                                                    usuario.setColor(color);
+                                                    usuario.setNombreTarjeta(nombreTarjeta);
+                                                    usuario.setNumeroTarjeta(Integer.parseInt(numeroTarjeta));
+                                                    usuario.setTipoTarjeta(tipoTarjeta);
+                                                    usuario.setFechaDeCaducidad(fechaDeCaducidad);
+                                                    usuario.setCVV(cvv);
+
                                                     FirebaseUser currentUser = mAuth.getCurrentUser(); //esto funciona cuando esta registrado correctamente
                                                     DatabaseReference reference = database.getReference("Usuarios/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
                                                     reference.setValue(usuario);
@@ -238,9 +285,11 @@ public class RegistroActivity extends AppCompatActivity {
                                             usuario.setFechaDeNacimiento(fechaDeNacimiento);
                                             usuario.setGenero(genero);
                                             usuario.setFotoPerfilURL(Constantes.URL_FOTO_POR_DEFECTO_USUARIOS);
-                                            usuario.setPlaca(placa);
-                                            usuario.setModelo(modelo);
-                                            usuario.setColor(color);
+                                            usuario.setNombreTarjeta(nombreTarjeta);
+                                            usuario.setNumeroTarjeta(Integer.parseInt(numeroTarjeta));
+                                            usuario.setTipoTarjeta(tipoTarjeta);
+                                            usuario.setFechaDeCaducidad(fechaDeCaducidad);
+                                            usuario.setCVV(cvv);
                                             FirebaseUser currentUser = mAuth.getCurrentUser(); //esto funciona cuando esta registrado correctamente
                                             DatabaseReference reference = database.getReference("Usuarios/"+currentUser.getUid()); //guarda el mismo uid del usuario en la database
                                             reference.setValue(usuario);

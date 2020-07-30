@@ -58,7 +58,7 @@
                     android:id="@+id/idPerfilNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -82,7 +82,7 @@
                     android:id="@+id/idPerfilCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Correo"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -128,7 +128,7 @@
                     android:id="@+id/txtPerfilFechaDeNacimiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Fecha de Nacimiento"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -152,7 +152,7 @@
                     android:id="@+id/txtPerfilGenero"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Genero"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -181,7 +181,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Informacion del Vehiculo"
+                    android:hint="Informacion de la tarjeta"
                     android:textSize="18sp"
                     android:textColorHint="@color/black"
                     android:padding="5sp"
@@ -196,17 +196,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Placa"
+                    android:hint="Nombre"
                     android:textSize="18sp"
                     android:textColorHint="@color/black"
                     android:padding="5sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/txtPerfilPlaca"
+                    android:id="@+id/txtPerfilNombreTarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Placa"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -220,17 +220,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Modelo"
+                    android:hint="Numero"
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/txtPerfilModelo"
+                    android:id="@+id/txtPerfilNumeroTarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Modelo"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
@@ -244,22 +244,71 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Color"
+                    android:hint="Tipo"
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/txtPerfilColor"
+                    android:id="@+id/txtPerfilTipoTarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Color"
+                    android:hint=""
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
                     android:padding="5sp"/>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Fecha de Caducidad"
+                    android:padding="5sp"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtPerfilCaducidadTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    android:padding="5sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="CVV"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    android:padding="5sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtPerfilCVV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    android:padding="5sp"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>

@@ -43,9 +43,9 @@ public class PerfilMensajeriaActivity extends AppCompatActivity {
 
         fotoPerfilMensajeria = findViewById(R.id.fotoPerfilMensajeria);
         nombrePerfilMensajeria = findViewById(R.id.idPerfilMensajeriaNombre);
-        placaPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaPlaca);
-        modeloPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaModelo);
-        colorPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaColor);
+        //placaPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaPlaca);
+        //modeloPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaModelo);
+        //colorPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaColor);
 
         btnRegresar = findViewById(R.id.btnPerfilMensajeriaRegresar);
         btnChatear = findViewById(R.id.btnPerfilMensajeriaChatear);
@@ -56,9 +56,9 @@ public class PerfilMensajeriaActivity extends AppCompatActivity {
                 String url = lUsuario.getUsuario().getFotoPerfilURL();
                 loadImageFromURL(url);
                 nombrePerfilMensajeria.setText(lUsuario.getUsuario().getNombre());
-                placaPerfilMensajeria.setText(lUsuario.getUsuario().getPlaca());
-                modeloPerfilMensajeria.setText(lUsuario.getUsuario().getModelo());
-                colorPerfilMensajeria.setText(lUsuario.getUsuario().getColor());
+                //placaPerfilMensajeria.setText(lUsuario.getUsuario().getPlaca());
+                //modeloPerfilMensajeria.setText(lUsuario.getUsuario().getModelo());
+                //colorPerfilMensajeria.setText(lUsuario.getUsuario().getColor());
             }
 
             @Override

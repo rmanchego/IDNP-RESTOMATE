@@ -26,6 +26,15 @@
                 android:text="Registro Usuario"
                 />
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoPerfil"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click para cambiar tu foto de perfil"/>
 
 
             <EditText
@@ -87,41 +96,62 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="20sp"
-                android:paddingBottom="10sp"
-                android:text="Registro Auto"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:layout_marginTop="20dp"
+                android:text="Datos de la Tarjeta"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/fotoPerfil"
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@mipmap/ic_launcher"/>
-            <TextView
+            <EditText
+                android:id="@+id/idRegistroNombreTarjeta"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre en la tarjeta"
+                android:inputType="text" />
+
+            <EditText android:id="@+id/idRegistroNumeroTarjeta"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:hint="Numero de la tarjeta"
+                android:inputType="text" />
+
+            <RadioGroup
+                android:id="@+id/rgTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rdVisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="VISA"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+                <RadioButton
+                android:id="@+id/rdMasterCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click para cambiar tu foto de perfil"/>
+                android:hint="MasterCard"
+                android:layout_weight="1"/>
+                <RadioButton
+                    android:id="@+id/rdScotiabank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Scotiabank"
+                    android:layout_weight="1"/>
+            </RadioGroup>
 
             <EditText
-                android:id="@+id/idRegistroPlaca"
-                android:layout_width="fill_parent"
+                android:id="@+id/txtFechaDeCaducidad"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Placa"
-                android:inputType="text" />
-
-            <EditText android:id="@+id/idRegistroModelo"
-                android:layout_height="wrap_content"
-                android:layout_width="fill_parent"
-                android:hint="Modelo"
-                android:inputType="text" />
+                android:hint="Fecha de Caducidad"
+                android:inputType="date"
+                android:clickable="true"
+                android:focusable="false"/>
 
             <EditText
-                android:id="@+id/idRegistroColor"
+                android:id="@+id/idRegistroCVV"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Color"
+                android:hint="CVV"
                 android:inputType="text" />
 
             <Button
@@ -132,6 +162,7 @@
                 android:backgroundTint="#57BBE9"
                 android:drawablePadding="6dp"
                 android:enabled="true"
+                android:layout_marginTop="20dp"
                 android:paddingLeft="15dip"
                 android:paddingRight="15dip"
                 android:textAlignment="center"

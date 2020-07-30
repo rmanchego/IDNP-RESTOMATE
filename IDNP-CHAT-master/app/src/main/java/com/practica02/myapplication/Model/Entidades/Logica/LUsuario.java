@@ -51,4 +51,10 @@ public class LUsuario implements Serializable {
         Date date = new Date(fecha);
         return simpleDateFormat.format(date);
     }
+
+    public static String obtenerFechaDeCaducidad(long fecha){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        Date date = new Date(fecha);
+        return simpleDateFormat.format(date);
+    }
 }
