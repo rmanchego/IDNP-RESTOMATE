@@ -44,24 +44,83 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="Nombre"
-                        android:textColorHint="@color/black"
-                        android:textSize="18sp"
-                        android:padding="5sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/idPerfilMensajeriaNombre"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre"
+                            android:textColorHint="@color/black"
+                            android:textSize="18sp"
+                            android:padding="5sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/idPerfilMensajeriaNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint=""
+                            android:textColorHint="@color/black"
+                            android:textSize="18sp"
+                            android:padding="5sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Dirección:"
+                            android:textColorHint="@color/black"
+                            android:textSize="18sp"
+                            android:padding="5sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/idPerfilMensajeriaDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint=""
+                            android:textColorHint="@color/black"
+                            android:textSize="18sp"
+                            android:padding="5sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Descripción:"
+                            android:textColorHint="@color/black"
+                            android:textSize="18sp"
+                            android:padding="5sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/idPerfilMensajeriaDescripción"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
                         android:textColorHint="@color/black"
                         android:textSize="18sp"
                         android:padding="5sp"/>
@@ -69,6 +128,12 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0"></LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"

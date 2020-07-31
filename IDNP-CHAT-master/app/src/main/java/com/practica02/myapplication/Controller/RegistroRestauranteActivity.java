@@ -191,6 +191,22 @@ public class RegistroRestauranteActivity extends AppCompatActivity {
                                                     FirebaseUser currentUser = mAuth.getCurrentUser(); //esto funciona cuando esta registrado correctamente
                                                     DatabaseReference reference = database.getReference("Restaurantes/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
                                                     reference.setValue(restaurante);
+
+                                                    Usuario usuarioRestaurante = new Usuario();
+                                                    usuarioRestaurante.setCorreo(correo);
+                                                    usuarioRestaurante.setNombre(nombre);
+                                                    usuarioRestaurante.setFechaDeNacimiento(0);
+                                                    usuarioRestaurante.setGenero("");
+                                                    usuarioRestaurante.setFotoPerfilURL(url);
+                                                    usuarioRestaurante.setNombreTarjeta("");
+                                                    usuarioRestaurante.setNumeroTarjeta(Integer.parseInt("1"));
+                                                    usuarioRestaurante.setTipoTarjeta("");
+                                                    usuarioRestaurante.setFechaDeCaducidad(0);
+                                                    usuarioRestaurante.setCVV("");
+
+                                                    DatabaseReference reference2 = database.getReference("Usuarios/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
+                                                    reference2.setValue(usuarioRestaurante);
+
                                                     finish();
                                                 }
                                             });
@@ -207,7 +223,24 @@ public class RegistroRestauranteActivity extends AppCompatActivity {
                                             FirebaseUser currentUser = mAuth.getCurrentUser(); //esto funciona cuando esta registrado correctamente
                                             DatabaseReference reference = database.getReference("Restaurantes/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
                                             reference.setValue(restaurante);
+
+                                            Usuario usuarioRestaurante = new Usuario();
+                                            usuarioRestaurante.setCorreo(correo);
+                                            usuarioRestaurante.setNombre(nombre);
+                                            usuarioRestaurante.setFechaDeNacimiento(0);
+                                            usuarioRestaurante.setGenero("");
+                                            usuarioRestaurante.setFotoPerfilURL(Constantes.URL_FOTO_POR_DEFECTO_USUARIOS);
+                                            usuarioRestaurante.setNombreTarjeta("");
+                                            usuarioRestaurante.setNumeroTarjeta(Integer.parseInt("1"));
+                                            usuarioRestaurante.setTipoTarjeta("");
+                                            usuarioRestaurante.setFechaDeCaducidad(0);
+                                                usuarioRestaurante.setCVV("");
+
+                                            DatabaseReference reference2 = database.getReference("Usuarios/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
+                                            reference.setValue(usuarioRestaurante);
+
                                             finish();
+
                                         }
                                     } else {
                                         // If sign in fails, display a message to the user.

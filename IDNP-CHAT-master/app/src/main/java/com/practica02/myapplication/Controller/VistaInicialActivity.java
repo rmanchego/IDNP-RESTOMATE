@@ -16,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.practica02.myapplication.Model.fragments.Chat;
+import com.practica02.myapplication.Model.fragments.VerRestaurantesFragment;
 import com.practica02.myapplication.Model.fragments.VerUsuariosFragment;
 import com.practica02.myapplication.Model.Adaptadores.ViewPagerAdapter;
 import com.practica02.myapplication.R;
@@ -108,7 +109,8 @@ public class VistaInicialActivity extends AppCompatActivity implements Navigatio
         Log.i("tab","metodo");
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new Chat(),"Chat");
-        viewPagerAdapter.addFragment(new VerUsuariosFragment(),"Usuarios");
+        //viewPagerAdapter.addFragment(new VerUsuariosFragment(),"Usuarios");
+        viewPagerAdapter.addFragment(new VerRestaurantesFragment(),"Restaurantes");
         viewPager.setAdapter(viewPagerAdapter);
     }
 }

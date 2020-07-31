@@ -9,7 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.practica02.myapplication.Model.Entidades.Logica.LRestaurante;
 import com.practica02.myapplication.Model.Entidades.Logica.LUsuario;
+import com.practica02.myapplication.Model.Persistencia.RestauranteDAO;
 import com.practica02.myapplication.Model.Persistencia.UsuarioDAO;
 import com.practica02.myapplication.R;
 import com.squareup.picasso.Picasso;
@@ -20,9 +22,8 @@ public class PerfilMensajeriaActivity extends AppCompatActivity {
 
     private CircleImageView fotoPerfilMensajeria;
     private TextView nombrePerfilMensajeria;
-    private TextView placaPerfilMensajeria;
-    private TextView modeloPerfilMensajeria;
-    private TextView colorPerfilMensajeria;
+    private TextView direccionPerfilMensajeria;
+    private TextView descripcionPerfilMensajeria;
 
     private Button btnRegresar;
     private Button btnChatear;
@@ -43,26 +44,26 @@ public class PerfilMensajeriaActivity extends AppCompatActivity {
 
         fotoPerfilMensajeria = findViewById(R.id.fotoPerfilMensajeria);
         nombrePerfilMensajeria = findViewById(R.id.idPerfilMensajeriaNombre);
-        //placaPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaPlaca);
-        //modeloPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaModelo);
-        //colorPerfilMensajeria = findViewById(R.id.txtPerfilMensajeriaColor);
+        direccionPerfilMensajeria = findViewById(R.id.idPerfilMensajeriaDireccion);
+        descripcionPerfilMensajeria = findViewById(R.id.idPerfilMensajeriaDescripción);
 
         btnRegresar = findViewById(R.id.btnPerfilMensajeriaRegresar);
         btnChatear = findViewById(R.id.btnPerfilMensajeriaChatear);
 
-        UsuarioDAO.getInstancia().obtenerInformacionDeUsuarioPorLlave(KEY_RECEPTOR, new UsuarioDAO.IDevolverUsuario() {
+        RestauranteDAO.getInstancia().obtenerInformacionDeRestaurantePorLlave(KEY_RECEPTOR, new RestauranteDAO.IDevolverRestaurante() {
             @Override
-            public void devolverUsuario(LUsuario lUsuario) {
-                String url = lUsuario.getUsuario().getFotoPerfilURL();
+            public void devolverRestaurante(LRestaurante lRestaurante) {
+                //String url = lUsuario.getUsuario().getFotoPerfilURL();
+                String url = lRestaurante.getRestaurante().getFotoPerfilURL();
                 loadImageFromURL(url);
-                nombrePerfilMensajeria.setText(lUsuario.getUsuario().getNombre());
-                //placaPerfilMensajeria.setText(lUsuario.getUsuario().getPlaca());
-                //modeloPerfilMensajeria.setText(lUsuario.getUsuario().getModelo());
-                //colorPerfilMensajeria.setText(lUsuario.getUsuario().getColor());
+                nombrePerfilMensajeria.setText(lRestaurante.getRestaurante().getNombre());
+                direccionPerfilMensajeria.setText(lRestaurante.getRestaurante().getDireccion());
+                descripcionPerfilMensajeria.setText(lRestaurante.getRestaurante().getDescripcion());
             }
 
             @Override
             public void devolverError(String error) {
+
             }
         });
 
