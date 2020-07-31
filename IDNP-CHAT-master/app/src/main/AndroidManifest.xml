@@ -2,36 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.practica02.myapplication">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".Model.Persistencia.FirebasePersistance"
         android:allowBackup="true"
         android:icon="@mipmap/icon_app_foreground"
-        android:label=  "@string/app_name"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Controller.ElegirRegistroActivity"></activity>
+        <activity android:name=".Controller.RegistroRestauranteActivity" />
+        <activity android:name=".Controller.LoginRestauranteActivity" />
         <activity android:name=".Controller.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.MenuActivity"></activity>
-        <activity android:name=".Controller.VerUsuariosActivity"></activity>
-        <activity android:name=".Controller.RegistroActivity"></activity>
-        <activity android:name=".Controller.MensajeriaActivity"></activity>
-        <activity android:name=".Controller.PerfilActivity"></activity>
-        <activity android:name=".Controller.ModificarPerfilActivity"></activity>
-        <activity android:name=".Controller.VistaInicialActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Controller.PerfilMensajeriaActivity"></activity>
-        <activity android:name=".Controller.AcercaDeActivity"></activity>
-
+        <activity android:name=".Controller.MenuActivity" />
+        <activity android:name=".Controller.VerUsuariosActivity" />
+        <activity android:name=".Controller.RegistroActivity" />
+        <activity android:name=".Controller.MensajeriaActivity" />
+        <activity android:name=".Controller.PerfilActivity" />
+        <activity android:name=".Controller.ModificarPerfilActivity" />
+        <activity
+            android:name=".Controller.VistaInicialActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Controller.PerfilMensajeriaActivity" />
+        <activity android:name=".Controller.AcercaDeActivity" />
     </application>
 
 </manifest>

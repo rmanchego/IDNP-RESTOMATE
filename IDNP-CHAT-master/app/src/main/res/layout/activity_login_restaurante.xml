@@ -13,7 +13,7 @@
     android:paddingBottom="16dp"
     android:background="@drawable/fondo"
     android:scaleType="centerCrop"
-    tools:context=".Controller.LoginActivity"
+    tools:context=".Controller.LoginRestauranteActivity"
     >
     <!--tools:context=".MainActivity"-->
 
@@ -37,7 +37,7 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:hint="Usuario"
+            android:hint="Restaurante"
             android:textColorHint="@color/white"
             android:selectAllOnFocus="true"
 
@@ -70,7 +70,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/idCorreoLogin"
+            android:id="@+id/idCorreoRestauranteLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -92,7 +92,7 @@
             android:shadowRadius="1.5" />
 
         <EditText
-            android:id="@+id/idContraseñaLogin"
+            android:id="@+id/idContraseñaRestauranteLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -115,7 +115,7 @@
 
         <Button
 
-            android:id="@+id/idLoginLogin"
+            android:id="@+id/idLoginRestauranteLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -134,7 +134,7 @@
         android:gravity="center|bottom"
         android:layout_weight="1">
         <TextView
-            android:id="@+id/idRegistroLogin"
+            android:id="@+id/idRegistroRestauranteLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="@color/black"
@@ -148,42 +148,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-    </LinearLayout>-->
-<!--
-    </LinearLayout>
-    <EditText
-        android:id="@+id/idCorreoLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Correo"
-        android:inputType="textEmailAddress"/>
-    <EditText
-        android:id="@+id/idContraseñaLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword"/>
-    <Button
-        android:id="@+id/idLoginLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Login"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|bottom"
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/idRegistroLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Registrarse"/>
-    </LinearLayout>
-
--->

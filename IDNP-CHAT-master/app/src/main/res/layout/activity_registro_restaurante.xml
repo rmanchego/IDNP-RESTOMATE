@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10sp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="7sp"
+                android:text="Registro Usuario"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/RestaurantefotoPerfil"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click para cambiar tu foto de perfil"/>
+
+
+            <EditText
+                android:id="@+id/idRegistroRestauranteNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre y Apellido" />
+
+            <EditText
+                android:id="@+id/idRegistroRestauranteCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/idRegistroRestauranteContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/idRegistroRestauranteContraseñaRepetida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repetir contraseña"
+                android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/idRegistroRestauranteDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="Descripción"/>
+            <EditText
+                android:id="@+id/idRegistroRestauranteLatitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Latitud" />
+            <EditText
+                android:id="@+id/idRegistroRestauranteLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longitud" />
+            <EditText
+                android:id="@+id/idRegistroRestauranteDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección" />
+
+
+            <Button
+                android:id="@+id/idRegistroRestauranteRegistrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Registrar"
+                android:backgroundTint="#57BBE9"
+                android:drawablePadding="6dp"
+                android:enabled="true"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
