@@ -2,122 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="top"
     android:orientation="vertical"
     android:padding="10sp"
     android:background="@drawable/fondogris"
     android:scaleType="centerCrop"
     >
 
-    <ScrollView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Informacion del Usuario"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            android:paddingTop="20sp"
+            android:paddingBottom="30sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            >
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Informacion del Usuario"
-                android:textColorHint="@color/black"
-                android:textSize="18sp"
-                android:paddingTop="20sp"
-                android:paddingBottom="30sp"
-                android:textStyle="bold"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoPerfilMensajeria"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="0">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/fotoPerfilMensajeria"
-                    android:layout_width="150sp"
-                    android:layout_height="150sp"
-                    />
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Nombre"
-                            android:textColorHint="@color/black"
-                            android:textSize="18sp"
-                            android:padding="5sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/idPerfilMensajeriaNombre"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint=""
-                            android:textColorHint="@color/black"
-                            android:textSize="18sp"
-                            android:padding="5sp"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Dirección:"
-                            android:textColorHint="@color/black"
-                            android:textSize="18sp"
-                            android:padding="5sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/idPerfilMensajeriaDireccion"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint=""
-                            android:textColorHint="@color/black"
-                            android:textSize="18sp"
-                            android:padding="5sp"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Descripción:"
-                            android:textColorHint="@color/black"
-                            android:textSize="18sp"
-                            android:padding="5sp"
-                            android:textStyle="bold"/>
-
-                    </LinearLayout>
                     <TextView
-                        android:id="@+id/idPerfilMensajeriaDescripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp"
+                        android:padding="5sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/idPerfilMensajeriaNombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint=""
@@ -127,149 +74,132 @@
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="0"></LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint=""
-                android:paddingTop="150sp"/>
-
-            <!--
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-
-                >
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="Informacion del Vehiculo"
-                        android:padding="5sp"
-                        android:textColorHint="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Placa"
+                        android:hint="Dirección:"
                         android:textColorHint="@color/black"
                         android:textSize="18sp"
                         android:padding="5sp"
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/txtPerfilMensajeriaPlaca"
-                        android:layout_width="213dp"
+                        android:id="@+id/idPerfilMensajeriaDireccion"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Placa"
+                        android:hint=""
                         android:textColorHint="@color/black"
-                        android:padding="5sp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:padding="5sp"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Modelo"
+                        android:hint="Descripción:"
                         android:textColorHint="@color/black"
                         android:textSize="18sp"
                         android:padding="5sp"
                         android:textStyle="bold"/>
 
-                    <TextView
-                        android:id="@+id/txtPerfilMensajeriaModelo"
-                        android:layout_width="212dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Modelo"
-                        android:textColorHint="@color/black"
-                        android:padding="5sp"
-                        android:textSize="18sp" />
-
                 </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/idPerfilMensajeriaDescripción"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="Color"
-                        android:textColorHint="@color/black"
-                        android:textSize="18sp"
-                        android:padding="5sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/txtPerfilMensajeriaColor"
-                        android:layout_width="212dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Color"
-                        android:textColorHint="@color/black"
-                        android:padding="5sp"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-            -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20sp"
-                android:gravity="center"
-
-                >
-
-                <Button
-                    android:id="@+id/btnPerfilMensajeriaRegresar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:hint="Regresar"
-                    android:textColorHint="@color/black"/>
-
-                <Button
-                    android:id="@+id/btnPerfilMensajeriaChatear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:hint="Chatear"
-                    android:textColorHint="@color/black"/>
+                    android:hint=""
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    android:padding="5sp"/>
 
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:visibility="invisible">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:src="@mipmap/ic_launcher"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del plato"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/txtPrecioPlato1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlatos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="10sp"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/btnPerfilMensajeriaRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Regresar"
+                android:padding="5sp"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/btnPerfilMensajeriaChatear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Chatear"
+                android:padding="5sp"
+                android:textColorHint="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

@@ -5,10 +5,10 @@
 
 
     <item
-        android:id="@+id/modificar_perfil_main_menu"
+        android:id="@+id/agregar_plato_main_menu"
         android:icon="@android:drawable/ic_menu_search"
         app:showAsAction="never"
-        android:title="@string/modificar_perfil"/>
+        android:title="@string/agregar_plato"/>
 
 
     <item

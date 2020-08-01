@@ -16,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.practica02.myapplication.Model.fragments.Chat;
+import com.practica02.myapplication.Model.fragments.MapaRestaurantesFragment;
 import com.practica02.myapplication.Model.fragments.VerRestaurantesFragment;
 import com.practica02.myapplication.Model.fragments.VerUsuariosFragment;
 import com.practica02.myapplication.Model.Adaptadores.ViewPagerAdapter;
@@ -71,8 +72,8 @@ public class VistaInicialActivity extends AppCompatActivity implements Navigatio
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.modificar_perfil_main_menu:
-                modificarPerfil();
+            case R.id.agregar_plato_main_menu:
+                agregarPlato();
                 return true;
             case R.id.compartir_app_main_menu:
                 compartirapp();
@@ -88,6 +89,10 @@ public class VistaInicialActivity extends AppCompatActivity implements Navigatio
 
     private void modificarPerfil(){
         startActivity(new Intent(VistaInicialActivity.this, ModificarPerfilActivity.class));
+    }
+
+    private void agregarPlato(){
+        startActivity(new Intent(VistaInicialActivity.this, AgregarPlatoActivity.class));
     }
 
     private void compartirapp(){
@@ -111,6 +116,7 @@ public class VistaInicialActivity extends AppCompatActivity implements Navigatio
         viewPagerAdapter.addFragment(new Chat(),"Chat");
         //viewPagerAdapter.addFragment(new VerUsuariosFragment(),"Usuarios");
         viewPagerAdapter.addFragment(new VerRestaurantesFragment(),"Restaurantes");
+        viewPagerAdapter.addFragment(new MapaRestaurantesFragment(), "Mapa");
         viewPager.setAdapter(viewPagerAdapter);
     }
 }

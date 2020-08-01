@@ -14,6 +14,8 @@
         android:roundIcon="@mipmap/icon_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Model.fragments.MapaRestaurantesFragment"></activity>
+        <activity android:name=".Controller.AgregarPlatoActivity" />
         <activity android:name=".Controller.ElegirRegistroActivity" />
         <activity android:name=".Controller.RegistroRestauranteActivity" />
         <activity android:name=".Controller.LoginRestauranteActivity" />

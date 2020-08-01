@@ -94,6 +94,7 @@ public class RegistroRestauranteActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
+
         imagePicker = new ImagePicker(this);
         cameraPicker = new CameraImagePicker(this);
 

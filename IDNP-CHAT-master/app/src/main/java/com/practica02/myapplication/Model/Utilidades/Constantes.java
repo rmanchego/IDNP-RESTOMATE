@@ -7,4 +7,5 @@ public class Constantes {
     public static final String NODO_MENSAJES = "Mensajes";
     public static final String NODO_ULTIMO_MENSAJE = "Ultimo_Mensaje";
     public static final String NODO_DE_RESTAURANTES = "Restaurantes";
+    public static final String NODO_DE_PLATOS = "Platos";
 }
