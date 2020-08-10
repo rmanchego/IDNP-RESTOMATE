@@ -11,7 +11,7 @@
     android:paddingTop="150dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_comida3"
     android:scaleType="centerCrop"
     tools:context=".Controller.LoginActivity"
     >
@@ -35,17 +35,17 @@
 
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#E85555"
             android:textStyle="bold"
-            android:hint="Usuario"
-            android:textColorHint="@color/white"
+            android:hint="RESTOMATE"
+            android:textColorHint="#EF4236"
             android:selectAllOnFocus="true"
 
             android:shadowColor="@color/black"
             android:shadowDx="1.2"
             android:shadowDy="1.2"
             android:shadowRadius="1.5"
-            android:textSize="25sp"/>
+            android:textSize="30sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -60,7 +60,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@drawable/icon_app"/>
+            android:src="@drawable/icon_restomate"/>
     </LinearLayout>
 
     <LinearLayout
@@ -80,10 +80,10 @@
 
             android:inputType="text"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#F44336"
             android:textStyle="bold"
             android:hint="Correo"
-            android:textColorHint="@color/white"
+            android:textColorHint="#F44336"
             android:selectAllOnFocus="true"
 
             android:shadowColor="@color/black"
@@ -109,8 +109,8 @@
             android:shadowRadius="1.5"
 
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="#F44336"
+            android:textColorHint="#F44336"
             android:textStyle="bold" />
 
         <Button
@@ -124,7 +124,7 @@
             android:text="Iniciar Sesion"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:backgroundTint="#57BBE9" />
+            android:backgroundTint="#E13448" />
 
     </LinearLayout>
 
@@ -142,7 +142,7 @@
             android:shadowDy="1.2"
             android:shadowRadius="1.5"
             android:text="Registrarse"
-            android:textColor="#FF9800"
+            android:textColor="#E837D39D"
             android:textSize="20dip"
             android:textStyle="bold"/>
     </LinearLayout>
