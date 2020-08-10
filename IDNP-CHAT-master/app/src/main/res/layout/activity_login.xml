@@ -37,7 +37,7 @@
             android:textAlignment="center"
             android:textColor="#E85555"
             android:textStyle="bold"
-            android:hint="Usuario"
+            android:hint="RESTOMATE"
             android:textColorHint="#EF4236"
             android:selectAllOnFocus="true"
 
