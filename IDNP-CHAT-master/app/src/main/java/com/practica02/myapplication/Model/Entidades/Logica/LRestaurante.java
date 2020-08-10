@@ -34,15 +34,15 @@ public class LRestaurante {
     }
 
     public String obtenerFechaDeCreacion(){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-        Date date = new Date(UsuarioDAO.getInstancia().fechaDeCreacionLong());
-        return simpleDateFormat.format(date);
-    }
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            Date date = new Date(UsuarioDAO.getInstancia().fechaDeCreacionLong());
+            return simpleDateFormat.format(date);
+        }
 
-    public String obtenerFechaDeUltimaVezQueSeLogeo(){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-        Date date = new Date(UsuarioDAO.getInstancia().fechaDeUltimaVezQueSeLogeoLong());
-        return simpleDateFormat.format(date);
+        public String obtenerFechaDeUltimaVezQueSeLogeo(){
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            Date date = new Date(UsuarioDAO.getInstancia().fechaDeUltimaVezQueSeLogeoLong());
+            return simpleDateFormat.format(date);
     }
 
 }

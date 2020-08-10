@@ -68,7 +68,6 @@ public class VerUsuariosActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-
             }
         };
         rvUsuarios.setAdapter(adapter);

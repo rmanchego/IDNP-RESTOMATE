@@ -235,10 +235,10 @@ public class RegistroRestauranteActivity extends AppCompatActivity {
                                             usuarioRestaurante.setNumeroTarjeta(Integer.parseInt("1"));
                                             usuarioRestaurante.setTipoTarjeta("");
                                             usuarioRestaurante.setFechaDeCaducidad(0);
-                                                usuarioRestaurante.setCVV("");
+                                            usuarioRestaurante.setCVV("");
 
                                             DatabaseReference reference2 = database.getReference("Usuarios/" + currentUser.getUid()); //guarda el mismo uid del usuario en la database
-                                            reference.setValue(usuarioRestaurante);
+                                            reference2.setValue(usuarioRestaurante);
 
                                             finish();
 

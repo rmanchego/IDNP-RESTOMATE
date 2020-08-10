@@ -87,7 +87,6 @@ public class RestauranteDAO {
                 iDevolverRestaurante.devolverError(databaseError.getMessage());
             }
         });  //ejecuta una sola vez, no tiene listener por si ocurre cambio
-
     }
 
     public void añadirFotoDePerfilALosRestaurantesQueNoTienenFoto() {
