@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click para cambiar tu foto de perfil"/>
+                android:text="Click para agregar una imagen de referencia"/>
 
 
             <EditText

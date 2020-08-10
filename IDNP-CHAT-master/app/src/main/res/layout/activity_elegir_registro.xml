@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/fondo_bienvenida"
     android:padding="10sp">
 
     <ScrollView
@@ -15,6 +16,25 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="BIENVENIDO"
+                android:textAlignment="center"
+                android:textColor="#78342F"
+                android:textSize="80px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Seleccione el modo de registro:"
+                android:textColor="#78342F"
+                android:textSize="50px"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnRegistroUsuario"

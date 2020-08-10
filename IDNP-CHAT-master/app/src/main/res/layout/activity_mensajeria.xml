@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Controller.MensajeriaActivity"
     android:padding="5sp"
+    android:background="@drawable/fondo_chat"
     android:orientation="vertical">
 
     <LinearLayout
@@ -57,12 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColorHint="@color/black"
             android:hint="Escribe un mensaje " />
 
         <Button
             android:id="@+id/btnEnviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
             android:hint="Enviar" />
     </LinearLayout>
 </LinearLayout>

@@ -220,7 +220,7 @@ public class AgregarPlatoActivity extends AppCompatActivity {
             }
         });
 
-        Glide.with(this).load(Constantes.URL_FOTO_POR_DEFECTO_USUARIOS).into(fotoPerfilPlato); //Automaticamente se va a cargar una foto de perfil por defecto
+        Glide.with(this).load(Constantes.URL_FOTO_POR_DEFECTO_PLATOS).into(fotoPerfilPlato); //Automaticamente se va a cargar una foto de perfil por defecto
 
     }
 

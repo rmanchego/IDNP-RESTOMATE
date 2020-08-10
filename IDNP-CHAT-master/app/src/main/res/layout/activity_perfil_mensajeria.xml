@@ -5,7 +5,7 @@
     android:gravity="top"
     android:orientation="vertical"
     android:padding="10sp"
-    android:background="@drawable/fondogris"
+    android:background="@drawable/fondo_perfil_mensajeria"
     android:scaleType="centerCrop"
     >
 

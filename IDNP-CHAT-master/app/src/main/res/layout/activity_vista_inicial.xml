@@ -19,7 +19,7 @@
                 android:id="@+id/myToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#15aeb2"
+                android:background="#F85F53"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -27,7 +27,7 @@
                 android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#2cb3b7"
+                android:background="#F85F53"
                 app:tabGravity="fill"
                 app:tabIndicatorColor="@android:color/white"
                 app:tabIndicatorHeight="2dp"
