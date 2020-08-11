@@ -14,6 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/fondo_negro_transparente"
         android:gravity="center"
         android:orientation="vertical"
 
@@ -23,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Informacion del Usuario"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:textSize="18sp"
             android:paddingTop="20sp"
             android:paddingBottom="30sp"
@@ -58,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="Nombre"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/white"
                         android:textSize="18sp"
                         android:padding="5sp"
                         android:textStyle="bold"/>
@@ -68,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint=""
-                        android:textColorHint="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
                         android:padding="5sp"/>
 
@@ -84,7 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="Dirección:"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/white"
                         android:textSize="18sp"
                         android:padding="5sp"
                         android:textStyle="bold"/>
@@ -94,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint=""
-                        android:textColorHint="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
                         android:padding="5sp"/>
 
@@ -110,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="Descripción:"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/white"
                         android:textSize="18sp"
                         android:padding="5sp"
                         android:textStyle="bold"/>
@@ -121,7 +122,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint=""
-                    android:textColorHint="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:padding="5sp"/>
 
@@ -151,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nombre del plato"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_weight="1"
                 />
@@ -161,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Precio"
-                android:textColor="#000000"
+                android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"

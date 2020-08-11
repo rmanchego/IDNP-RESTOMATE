@@ -12,25 +12,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
+        android:background="@drawable/fondo_blanco_transparente"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/fotoPerfil"
             android:layout_width="48sp"
             android:layout_height="48sp"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
         <TextView
             android:id="@+id/nombrePerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RECEPTOR"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="17sp"
             android:paddingLeft="20sp"
-            />
+            android:text="RECEPTOR"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -38,34 +40,35 @@
         android:id="@+id/rvMensajes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/fondo_negro_transparente"
         android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/fondo_blanco_transparente"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/btnEnviarFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_gallery"
             android:layout_gravity="center"
-            />
+            android:background="@android:drawable/ic_menu_gallery" />
 
         <EditText
             android:id="@+id/txtMensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColorHint="@color/black"
-            android:hint="Escribe un mensaje " />
+            android:hint="Escribe un mensaje "
+            android:textColorHint="@color/black" />
 
         <Button
             android:id="@+id/btnEnviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:hint="Enviar" />
+            android:hint="Enviar"
+            android:textColorHint="@color/black" />
     </LinearLayout>
 </LinearLayout>
